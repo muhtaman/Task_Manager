@@ -46,9 +46,13 @@ class _TaskPageState extends State<TaskPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text(
             'Task Manager',
-            style: TextStyle(fontSize: 24),
+            style: TextStyle(
+              fontStyle: FontStyle.italic,
+              fontSize: 24,
+            ),
           ),
         ),
         body: Center(

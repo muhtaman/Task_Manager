@@ -42,29 +42,28 @@ class _EditTasksPageState extends State<EditTasksPage> {
             buildButton(),
           ],
         ),
-        //prevents keyboard from causing overflow
-        resizeToAvoidBottomInset: false,
 
-        bottomNavigationBar: buildButton(),
-        body: Column(
-          children: [
-            Form(
-              key: _formKey,
-              child: TaskFormWidget(
-                title: title,
-                description: description,
-                onChangedTitle: (title) => setState(() => this.title = title),
-                onChangedDescription: (description) =>
-                    setState(() => this.description = description),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Form(
+                key: _formKey,
+                child: TaskFormWidget(
+                  title: title,
+                  description: description,
+                  onChangedTitle: (title) => setState(() => this.title = title),
+                  onChangedDescription: (description) =>
+                      setState(() => this.description = description),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       );
 
   //Creates Save Button
   Widget buildButton() {
-    final isFormValid = title.isNotEmpty && description.isNotEmpty;
+    final isFormValid = title.isNotEmpty;
 
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),

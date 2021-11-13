@@ -24,7 +24,7 @@ class TaskFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.all(15),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
