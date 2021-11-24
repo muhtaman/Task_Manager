@@ -11,6 +11,9 @@
 _Make sure to run `flutter doctor` to check for issues_
 
 ### Intructions:
+
+_If you would just like to see the app in action, please download the apk from the releases tab._
+
 **Note**: These instructions are for Android Devices
 
 0. Make sure that the PATH environment variable for flutter has been set.
